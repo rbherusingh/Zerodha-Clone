@@ -1,0 +1,10 @@
+{
+  "name": "zerodha-clone",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm start --prefix frontend\" \"npm start --prefix dashboard\" \"nodemon --cwd backend index.js\""
+  },
+  "dependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
