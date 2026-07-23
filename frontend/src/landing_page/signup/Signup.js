@@ -11,13 +11,13 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/signup", {
+      const res = await axios.post("https://zerodha-clone-wmj5.onrender.com/signup", {
         name,
         email,
         password,
       });
       setMessage(res.data.message);
-      window.location.href = "http://localhost:3001";
+      window.location.href = "https://zerodha-clone-z8fj.onrender.com";
     } catch (err) {
       setMessage(err.response?.data?.message || "Something went wrong!");
     }
@@ -26,12 +26,12 @@ function Signup() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/login", {
+      const res = await axios.post("https://zerodha-clone-wmj5.onrender.com/login", {
         email,
         password,
       });
       setMessage(res.data.message);
-      window.location.href = "http://localhost:3001";
+      window.location.href = "https://zerodha-clone-z8fj.onrender.com";
     } catch (err) {
       setMessage(err.response?.data?.message || "Invalid credentials!");
     }

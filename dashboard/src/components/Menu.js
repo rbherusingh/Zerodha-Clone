@@ -14,7 +14,7 @@ const Menu = () => {
   };
 
   const handleLogout = () => {
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://zerodha-clone-1-fpfu.onrender.com";
   };
 
   const menuClass = "menu";
