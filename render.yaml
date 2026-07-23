@@ -5,6 +5,7 @@ services:
     rootDir: backend
     buildCommand: npm install
     startCommand: node index.js
+    plan: free
     envVars:
       - key: MONGO_URL
         sync: false
@@ -14,11 +15,13 @@ services:
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: ./build
+    staticPublishPath: build
+    plan: free
 
   - type: web
     name: zerodha-dashboard
     runtime: static
     rootDir: dashboard
     buildCommand: npm install && npm run build
-    staticPublishPath: ./build
+    staticPublishPath: build
+    plan: free
